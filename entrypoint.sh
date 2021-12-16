@@ -7,7 +7,7 @@ fi
 
 export REVIEWDOG_GITHUB_API_TOKEN="${INPUT_GITHUB_TOKEN}"
 
-cat coverage/review.txt \
+cat ./coverage/review.txt \
   | reviewdog -efm="%f:%l:%c: %m" \
       -name="simplecov-review" \
       -reporter="${INPUT_REPORTER:-github-pr-check}" \
